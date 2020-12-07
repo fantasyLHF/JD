@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .page {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .adv {
+            display: flex;
+            height: 45px;
+            color: #fff;
+            text-align: center;
+            line-height: 45px;
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .adv>div:nth-child(1) {
+            background-color: #000;
+            flex: 3;
+            display: flex;
+        }
+
+        .adv>div:nth-child(1)>div {
+            flex: 1;
+        }
+
+        .adv>div:nth-child(1)>div:nth-child(1)>img {
+            width: 13px;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .adv>div:nth-child(1)>div:nth-child(2)>img {
+            width: 30px;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .adv>div:nth-child(1) span {
+            flex: 8;
+        }
+
+        .adv>div:nth-child(2) {
+            background-color: #f63515;
+            flex: 1;
+        }
+
+        .header {
+            background: url(./images/bg.jpg);
+            background-size: 100% 121%;
+            background-repeat: no-repeat;
+            height: auto;
+            /* max-height: 293px; */
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            /* padding-top: 7px; */
+            position: relative;
+
+        }
+
+        .header .search {
+            /* position: fixed; */
+            overflow: hidden;
+            max-width: 725px;
+            height: 30px;
+            display: flex;
+            font-size: 14px;
+            margin: 0 auto;
+            line-height: 30px;
+            color: #fff;
+            /* position: relative; */
+        }
+
+        .header .search div {
+            width: 30px;
+            text-align: center;
+            height: 30px;
+
+        }
+
+        .header .search div img {
+            width: 20px;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .header .search input {
+            margin: 0px 10px;
+            flex: 1;
+            border: 0;
+            outline: none;
+            height: 30px;
+            border-radius: 20px;
+            box-sizing: border-box;
+            text-indent: 80px;
+            color: #666666;
+        }
+
+        .header .box>span:nth-child(1) {
+            background: url(./images/jd.png);
+            position: absolute;
+            height: 16px;
+            width: 30px;
+            background-size: auto 16px;
+            background-repeat: no-repeat;
+            top: 17px;
+            left: 68px;
+            border-right: 1px solid #dddddd;
+            z-index: 10;
+        }
+
+        .header .box>span:nth-child(2) {
+            height: 18px;
+            width: 30px;
+            background: url(./images/jd-sprites.png) -150px 0px;
+            position: absolute;
+            background-size: 250px auto;
+            top: 16px;
+            left: 100px;
+            z-index: 10;
+        }
+
+        .box {
+            background-color: #fff;
+            padding: 10px 0;
+            background-color: rgb(0, 95, 64);
+            position: sticky;
+            top: 0;
+        }
+
+        .header .bigAdv {
+            /* margin-top: 14px; */
+            display: flex;
+        }
+
+        .header .bigAdv>div:nth-child(1) {
+            flex: 1;
+        }
+
+        .header .bigAdv>div:nth-child(3) {
+            flex: 1;
+        }
+
+        .header .bigAdv>div:nth-child(2) {
+            flex: 70;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .header .bigAdv img {
+            width: 100%;
+            height: auto;
+        }
+
+        .clas {
+            max-height: 356px;
+            /* max-width: 725px; */
+            /* background-color: yellow; */
+            margin: 0 auto 15px;
+            max-width: 725px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .clas ul {
+            flex: 1;
+            display: flex;
+
+        }
+
+        .clas ul li {
+            margin-top: 15px;
+            flex: 1;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .clas ul li img {
+            width: 90%;
+            height: auto;
+        }
+
+        .T618 {
+            background-color: #b2f9e9;
+            height: auto;
+        }
+
+        .T618>img {
+            width: 100%;
+            height: auto;
+        }
+
+        .T618 .twoAdv {
+            display: flex;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .T618 .twoAdv>div:nth-child(1) {
+            width: 12px;
+        }
+
+        .T618 .twoAdv>div:nth-child(3) {
+            width: 12px;
+        }
+
+        .T618 .twoAdv>div:nth-child(2) {
+            border-radius: 20px;
+            overflow: hidden;
+            flex: 1;
+            display: flex
+        }
+
+        .T618 .twoAdv>div:nth-child(2)>div {
+            flex: 1;
+
+        }
+
+        .T618 .twoAdv>div:nth-child(2)>div img {
+            width: 100%;
+            height: auto;
+        }
+
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?bcqupx');
+            src: url('fonts/icomoon.eot?bcqupx#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?bcqupx') format('truetype'),
+                url('fonts/icomoon.woff?bcqupx') format('woff'),
+                url('fonts/icomoon.svg?bcqupx#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        .footer {
+            height: 64px;
+            display: flex;
+            position: sticky;
+            bottom: 0;
+            background-color: #f6f6f6;
+        }
+
+        .footer>div {
+            font-family: 'icomoon';
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            color: rgb(139, 139, 139);
+            position: relative;
+        }
+
+        .footer img {
+            height: 30px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        .footer>div a {
+            position: absolute;
+            height: 64px;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .footer>div>div:nth-child(1) {
+            font-size: 30px;
+            margin-top: 5px;
+        }
+
+        .footer>div>div:nth-child(2) {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="adv">
+            <div>
+                <div><img src="./images/close.png" alt=""></div>
+                <div><img src="./images/logo.png" alt=""></div>
+                <span>打开京东App,购物更轻松</span>
+            </div>
+            <div>立即打开</div>
+        </div>
+
+        <div class="header">
+            <div class="box">
+                <span></span>
+                <span></span>
+                <div class="search">
+                    <div>
+                        <img src="./images/more.png" alt="">
+                    </div>
+                    <input type="text" name="" id="" placeholder="香奈儿香水">
+                    <div>登录</div>
+                </div>
+            </div>
+            <div class="bigAdv">
+                <div></div>
+                <div><img src="./images/banner01.dpg" alt=""></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="clas">
+            <ul>
+                <li>
+                    <img src="./images/icon01.png" alt="">
+                    <div>京东超市</div>
+                </li>
+                <li><img src="./images/icon02.png" alt="">
+                    <div>数码电器</div>
+                </li>
+                <li><img src="./images/icon03.png" alt="">
+                    <div>京东服饰</div>
+                </li>
+                <li><img src="./images/icon04.png" alt="">
+                    <div>京东生鲜</div>
+                </li>
+                <li><img src="./images/icon05.png" alt="">
+                    <div>京东到家</div>
+                </li>
+            </ul>
+            <ul>
+                <li><img src="./images/icon06.png" alt="">
+                    <div>充值缴费</div>
+                </li>
+                <li><img src="./images/icon07.png" alt="">
+                    <div>9.9元拼</div>
+                </li>
+                <li><img src="./images/icon08.png" alt="">
+                    <div>领卷</div>
+                </li>
+                <li><img src="./images/icon09.png" alt="">
+                    <div>赚钱</div>
+                </li>
+                <li><img src="./images/icon10.png" alt="">
+                    <div>plus会员</div>
+                </li>
+            </ul>
+        </div>
+        <div class="T618">
+            <img src="./images/618img.png" alt="">
+            <div class="twoAdv">
+                <div></div>
+                <div>
+                    <div><img src="./images/newPerson01.png" alt=""></div>
+                    <div><img src="./images/newPerson02.png" alt=""></div>
+
+                </div>
+                <div></div>
+            </div>
+            <img src="./images/newPerson03.webp" alt="">
+            <div class="twoAdv">
+                <div></div>
+                <div>
+                    <div><img src="./images/card01.png" alt=""></div>
+                    <div><img src="./images/card02.png" alt=""></div>
+                    <div><img src="./images/card03.png" alt=""></div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <div>
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <div>首页</div>
+            </div>
+            <div>
+                <div></div>
+                <div>分类</div>
+                <a href="./list.html"></a>
+            </div>
+            <div>
+                <div></div>
+                <div>惊喜</div>
+            </div>
+            <div>
+                <div></div>
+                <div>购物车</div>
+            </div>
+            <div>
+                <div></div>
+                <div>未登录</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

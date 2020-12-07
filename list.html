@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .top {
+            background-color: lightgreen;
+            height: 44px;
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 44px;
+            position: sticky;
+            top: 0;
+        }
+
+        .page {
+            max-width: 750px;
+            margin: 0 auto;
+            display: flex;
+            /* height: 100%; */
+            overflow: hidden;
+        }
+
+        .left {
+            flex: 1;
+            max-width: 120px;
+            background-color: rgb(248, 248, 248);
+            min-width: 65px;
+            position: relative;
+        }
+
+        .left ul {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            list-style: none;
+            position: absolute;
+            top: 0px;
+        }
+
+        .left ul li {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .right {
+            flex: 4;
+            background-color: rgb(135, 206, 235);
+        }
+
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?bcqupx');
+            src: url('fonts/icomoon.eot?bcqupx#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?bcqupx') format('truetype'),
+                url('fonts/icomoon.woff?bcqupx') format('woff'),
+                url('fonts/icomoon.svg?bcqupx#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        .footer {
+            max-width: 750px;
+            margin: 0 auto;
+            height: 64px;
+            display: flex;
+            position: sticky;
+            bottom: 0;
+            background-color: #f6f6f6;
+        }
+
+        .footer>div {
+            font-family: 'icomoon';
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            color: rgb(139, 139, 139);
+            position: relative;
+        }
+
+        .footer>div:nth-child(2) {
+            color: #e4393c;
+        }
+
+        .footer img {
+            height: 30px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        .footer>div a {
+            position: absolute;
+            height: 64px;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .footer>div>div:nth-child(1) {
+            font-size: 30px;
+            margin-top: 5px;
+        }
+
+        .footer>div>div:nth-child(2) {
+            margin-top: 5px;
+        }
+
+        .sty {
+            color: #fff;
+            background-color: #e4393c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">头部</div>
+    <div class="page">
+        <div class="left">
+            <ul>
+                <li>热门推荐</li>
+                <li>手机数码</li>
+                <li>电脑办公</li>
+                <li>家用电器</li>
+                <li>计生情趣</li>
+                <li>美妆护肤</li>
+                <li>个护清洁</li>
+                <li>汽车生活</li>
+                <li>京东超市</li>
+                <li>男装</li>
+                <li>男鞋</li>
+                <li>女装</li>
+                <li>女鞋</li>
+                <li>母婴童装</li>
+                <li>图书音像</li>
+                <li>运动户外</li>
+                <li>内衣配饰</li>
+                <li>食品生鲜</li>
+                <li>酒水饮料</li>
+                <li>热门推荐</li>
+                <li>手机数码</li>
+                <li>电脑办公</li>
+                <li>家用电器</li>
+                <li>计生情趣</li>
+                <li>美妆护肤</li>
+                <li>个护清洁</li>
+                <li>汽车生活</li>
+                <li>京东超市</li>
+                <li>男装</li>
+                <li>男鞋</li>
+                <li>女装</li>
+                <li>女鞋</li>
+                <li>母婴童装</li>
+                <li>图书音像</li>
+                <li>运动户外</li>
+                <li>内衣配饰</li>
+                <li>食品生鲜</li>
+                <li>酒水饮料</li>
+                <li>家具家装</li>
+                <li>家居厨具</li>
+                <li>箱包手袋</li>
+                <li>钟表珠宝</li>
+                <li>玩具乐器</li>
+                <li>医药保健</li>
+                <li>宠物生活</li>
+                <li>礼品鲜花</li>
+                <li>农资绿植</li>
+                <li>生活旅行</li>
+                <li>奢侈品</li>
+                <li>京东国际</li>
+                <li>艺术邮币</li>
+                <li>二手商品</li>
+                <li>特产馆</li>
+                <li>京东金融</li>
+                <li>国际名牌</li>
+                <li>拍卖</li>
+                <li>房产</li>
+                <li>工业品</li>
+            </ul>
+        </div>
+        <div class="right">
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+            <p>假装这里是<span>热门推荐</span>的详细内容</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <div>
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div>首页</div>
+            <a href="./index.html"></a>
+        </div>
+        <div>
+            <div></div>
+            <div>分类</div>
+            <a href="./list.html"></a>
+        </div>
+        <div>
+            <div></div>
+            <div>惊喜</div>
+        </div>
+        <div>
+            <div></div>
+            <div>购物车</div>
+        </div>
+        <div>
+            <div></div>
+            <div>未登录</div>
+        </div>
+    </div>
+    <script>
+        // 页面高度设置
+        var page = document.querySelector(".page");
+        page.style.height = window.screen.height - 44 - 64 + "px";
+        // 获取ul
+        var ul = document.querySelector("ul");
+        var startTime;
+        var endTime;
+        var startLocal;
+        var point;
+        ul.ontouchstart = function (e) {
+            point = parseInt(getComputedStyle(this).top);
+            startLocal = e.touches[0].clientY;
+            startTime = +new Date();
+            console.log(e)
+        }
+        ul.ontouchmove = function (e) {
+            var nowLocal = e.touches[0].clientY;
+            var move = nowLocal - startLocal;
+            var top = point + move;
+            if (top < 0 && top > -(document.querySelectorAll("ul li").length * 50 - (window.screen.height - 44 - 64))) {
+                this.style.top = top + "px"
+            }
+            console.log(top)
+
+        }
+        ul.ontouchend = function (e) {
+            endTime = +new Date();
+            // 轻触
+            if (endTime - startTime < 150) {
+                var change = document.querySelectorAll("p>span");
+                for (var i = 0; i < change.length; i++) {
+                    change[i].innerHTML = e.target.innerHTML;
+                }
+                var li = document.querySelectorAll("ul li")
+                for (var j = 0; j < li.length; j++) {
+                    li[j].classList.remove("sty")
+                }
+                e.target.classList.add("sty")
+            }
+        }
+    </script>
+</body>
+
+</html>
